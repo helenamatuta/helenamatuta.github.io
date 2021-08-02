@@ -21,12 +21,11 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbzk87CeDapWs-6q-cKeY81lGH_B13UdvVvpR4IJQLW2znyFj1w4tthShfJC08kR8VLT/exec",
-                type: "GET",
+                url: "https://script.google.com/macros/s/AKfycbw8HI9LQb5zHy4tdxynIMTfJKumEmElA94TfoI8nH8PRYevFTPbHJgDGIcSz32cbMdj/exec",
+                method: "GET",
                 dataType: "jsonp",
-                crossDomain:true,
+                crossDomain: true,
                 data: $form.serializeObject,
-                cache: false,
                 success: function () {
                     // Success message
                     $("#success").html("<div class='alert alert-success'>");
