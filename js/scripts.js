@@ -6,22 +6,6 @@
     (function($) {
     "use strict"; // Start of use strict
 
-
-
-    var $form = $('form#contactForm');
-    var url = 'https://script.google.com/macros/s/AKfycbzk87CeDapWs-6q-cKeY81lGH_B13UdvVvpR4IJQLW2znyFj1w4tthShfJC08kR8VLT/exec';
-
-    $('#sendMessageButton').on('click', function(e) {
-      e.preventDefault();
-      var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-      }).success(
-      // do something
-      );
-    })
   
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
