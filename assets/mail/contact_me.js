@@ -21,9 +21,9 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbw8HI9LQb5zHy4tdxynIMTfJKumEmElA94TfoI8nH8PRYevFTPbHJgDGIcSz32cbMdj/exec",
-                method: "GET",
-                dataType: "jsonp",
+                url: "https://www.goncalomiranda.com/_functions-dev/contact/",
+                method: "POST",
+                dataType: "json",
                 crossDomain: true,
                 data: $form.serializeObject,
                 success: function () {
