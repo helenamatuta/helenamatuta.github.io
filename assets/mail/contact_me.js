@@ -25,7 +25,9 @@ $(function () {
                 method: "POST",
                 dataType: "json",
                 crossDomain: true,
-                data: $form.serializeObject,
+                
+                data: JSON.stringify( { "name": name, "email": email, "phone": phone, "message": message } ),
+    
                 success: function () {
                     // Success message
                     $("#success").html("<div class='alert alert-success'>");
