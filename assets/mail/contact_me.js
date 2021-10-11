@@ -21,11 +21,11 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "https://www.goncalomiranda.com/_functions-dev/contact/",
+                url: "https://www.goncalomiranda.com/_functions/contact/",
                 method: "POST",
+                headers: { 'x-api-key': '6fec272e-0ea6-4f24-90e4-07e3b17624c8'},
                 dataType: "json",
-                crossDomain: true,
-                
+                crossDomain: true,   
                 data: JSON.stringify( { "name": name, "email": email, "phone": phone, "message": message } ),
     
                 success: function () {
